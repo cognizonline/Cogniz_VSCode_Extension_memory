@@ -1,0 +1,52 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+out/
+
+# VS Code
+.vscode-test/
+*.vsix
+
+# Development files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+
+# Development documentation (keep production docs)
+SIDEBAR_FIX_*.md
+DEDUPLICATION_*.md
+COGNIZ_REBRAND_*.md
+DEBUG_VERSION_*.md
+FIXES_SUMMARY.md
+QUICK_TEST_GUIDE.md
+PLAN.md
+SKILLS_INTEGRATION_PLAN.md
+INTEGRATION_GUIDE.md

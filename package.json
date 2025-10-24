@@ -1,0 +1,96 @@
+{
+    "name": "cogniz-vs",
+    "displayName": "Cogniz Memory",
+    "description": "Cogniz memory platform - make your AI remember and give it context",
+    "version": "0.3.3",
+    "publisher": "cogniz",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cognizonline/Cogniz_VSCode_Extension_memory.git"
+    },
+    "bugs": {
+        "url": "https://github.com/cognizonline/Cogniz_VSCode_Extension_memory/issues"
+    },
+    "homepage": "https://cogniz.online",
+    "engines": {
+        "vscode": "^1.85.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:cognizVs.configureConnection",
+        "onCommand:cognizVs.saveSelection",
+        "onCommand:cognizVs.searchMemories",
+        "onCommand:cognizVs.openDashboard",
+        "onView:cognizVs.memoryView",
+        "onCommand:cognizVs.showConfiguration",
+        "onCommand:cognizVs.saveClipboard"
+    ],
+    "main": "dist/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "cognizVs.configureConnection",
+                "title": "Cogniz VS: Configure Connection"
+            },
+            {
+                "command": "cognizVs.saveSelection",
+                "title": "Cogniz VS: Save Selected Text as Memory"
+            },
+            {
+                "command": "cognizVs.searchMemories",
+                "title": "Cogniz VS: Search Memories"
+            },
+            {
+                "command": "cognizVs.openDashboard",
+                "title": "Cogniz VS: Open Dashboard"
+            },
+            {
+                "command": "cognizVs.showConfiguration",
+                "title": "Cogniz VS: Show Stored Configuration"
+            },
+            {
+                "command": "cognizVs.saveClipboard",
+                "title": "Cogniz VS: Save Clipboard as Memory"
+            }
+        ],
+        "viewsContainers": {
+            "activitybar": [
+                {
+                    "title": "Cogniz VS",
+                    "id": "cognizVs",
+                    "icon": "media/Cogniz_logo.png"
+                }
+            ]
+        },
+        "views": {
+            "cognizVs": [
+                {
+                    "contextualTitle": "Cogniz VS Memory",
+                    "name": "Memory",
+                    "id": "cognizVs.memoryView",
+                    "type": "webview"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "lint": "eslint src --ext .ts"
+    },
+    "devDependencies": {
+        "@types/node": "^18.19.0",
+        "@types/vscode": "^1.85.0",
+        "@typescript-eslint/eslint-plugin": "^6.9.0",
+        "@typescript-eslint/parser": "^6.9.0",
+        "eslint": "^8.53.0",
+        "typescript": "^5.3.3"
+    },
+    "icon": "media/Cogniz_logo.png",
+    "dependencies": {
+        "undici": "^7.16.0"
+    }
+}
